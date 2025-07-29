@@ -1,0 +1,26 @@
+#API
+@username = {{$dotenv USERNAME}}
+@password = {{$dotenv PASSWORD}}
+@email = {{$dotenv EMAIL}}
+@userID=3#
+
+### getting All users
+GET https://localhost:8080/api/user
+### create user
+POST https://localhost:8080/api/auth/local/register
+Content-Type: application/json
+    {
+        "username": "{{username}}",
+        "password": "{{password}}",
+        "email": "{{email}}"
+    }
+
+### update a user by ID
+PUT https://localhost:8080/api/user/{{userID}}
+Content-Type: application/json
+    {
+        "username": "upd1",
+        "email": "tarawut-s@rmutp.ac.th"
+    }
+### delete user by ID
+DELETE https://localhost:8080/api/user/{{userID}}
