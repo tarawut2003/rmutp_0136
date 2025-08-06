@@ -16,5 +16,5 @@ model User {
   username String @unique
   password String
   mobile     String @db.VarChar(10)
-  cardID String @db.VarChar(13)
+  cardid String @db.VarChar(13)
 }
